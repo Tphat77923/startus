@@ -7,7 +7,7 @@ const client = new Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
-	require('http').createServer((req, res) => res.end('online')).listen(3000)
+	require('http').createServer((req, res) => res.end('online')).listen(80)
 });
 
 client.on('message', message => {
@@ -33,12 +33,13 @@ message.channel.send("tp!modstarts");
 							const logch = client.channels.cache.get(log);
 											logch.send('online! :) ');
 						}
+				});
+					
         collector.on('end', (collected, reason) => {
             if (reason === 'time')
-                return message.logch.send(':x: bot is offline :( ');
+                return logch.send(':x: bot is offline :( ');
 
     })
-				})
 },3000);
 
 
