@@ -7,7 +7,19 @@ const client = new Client();
 
 client.on('ready', () => {
     console.log(`I am login in ${client.user.tag}`);
+// javascript code that creates a website
+
 })
+// and listens on port 3000 for connections
+
+// require http module
+var http = require('http');
+
+// create http server
+http.createServer(function (req, res) {
+
+  res.end('Hello World\n');
+}).listen(3000);
 client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
