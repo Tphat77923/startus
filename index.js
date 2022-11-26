@@ -7,6 +7,7 @@ const client = new Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
+	require('http').createServer((req, res) => res.end('online')).listen(3000)
 });
 
 client.on('message', message => {
@@ -38,7 +39,7 @@ message.channel.send("tp!modstarts");
 
     })
 				})
-},300000);
+},3000);
 
 
 	}
