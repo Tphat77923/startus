@@ -7,8 +7,6 @@ const client = new Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
-	require('http').createServer((req, res) => res.end('online')).listen(80)
-});
 
 client.on('message', message => {
     if (message.content === 'ping') {
