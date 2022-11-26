@@ -19,7 +19,7 @@ var http = require('http');
 http.createServer(function (req, res) {
 
   res.end('Hello World\n');
-}).listen(3000);
+}).listen(process.env.port||3000);
 client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
