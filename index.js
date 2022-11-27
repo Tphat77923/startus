@@ -17,7 +17,8 @@ var http = require('http');
 
 // create http server
 http.createServer(function (req, res) {
-
+console.log(req.url);
+	console.log("server online")
   res.end('Hello World\n');
 }).listen(process.env.port||3000);
 client.on('message', message => {
